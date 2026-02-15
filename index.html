@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hermosa Beach Plumbing, Heating & A.C. | Your Local Plumber</title>
+  <meta name="description" content="Trusted plumbing, heating & AC service in Hermosa Beach, CA. Same-day service, fair pricing. Call (866) 818-5182">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; color: #1a1a2e; background: #ffffff; }
+    
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+      color: white;
+      padding: 0;
+    }
+    .topbar {
+      background: rgba(0,0,0,0.2);
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar a { color: white; text-decoration: none; font-weight: 500; }
+    .topbar a:hover { text-decoration: underline; }
+    .nav {
+      padding: 20px 0;
+    }
+    .nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .logo span { color: #60a5fa; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 15px; }
+    .nav-links a:hover { color: #60a5fa; }
+    .cta-phone {
+      background: #ef4444;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+    .cta-phone:hover { transform: scale(1.05); }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #1a365d 0%, #1e40af 50%, #2563eb 100%);
+      color: white;
+      padding: 80px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: white;
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #60a5fa; }
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+      opacity: 0.9;
+      margin-bottom: 32px;
+    }
+    .hero-buttons { display: flex; gap: 16px; }
+    .btn-primary {
+      background: #ef4444;
+      color: white;
+      padding: 16px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: #dc2626; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(239,68,68,0.4); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+    
+    .hero-image {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stat-number { font-size: 36px; font-weight: 800; color: #60a5fa; }
+    .stat-label { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+    
+    /* Rating badge */
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 20px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .stars { color: #fbbf24; font-size: 18px; }
+    
+    /* Container */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Services */
+    .services { padding: 80px 0; }
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: #64748b;
+      font-size: 18px;
+      margin-bottom: 48px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 36px 28px;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: #2563eb;
+      box-shadow: 0 12px 40px rgba(37,99,235,0.12);
+    }
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    .service-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      color: #64748b;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    
+    /* Why Us */
+    .why-us {
+      padding: 80px 0;
+      background: #f1f5f9;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 28px 20px;
+    }
+    .why-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .why-card p { color: #64748b; font-size: 14px; line-height: 1.5; }
+    
+    /* Reviews */
+    .reviews { padding: 80px 0; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .review-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 28px;
+      border-left: 4px solid #2563eb;
+    }
+    .review-stars { color: #fbbf24; font-size: 18px; margin-bottom: 12px; }
+    .review-text {
+      font-style: italic;
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .review-author { font-weight: 700; color: #1a365d; }
+    .review-source { font-size: 13px; color: #94a3b8; }
+    
+    /* CTA */
+    .cta-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+      color: white;
+      text-align: center;
+    }
+    .cta-section h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; }
+    .cta-section p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; }
+    .cta-phone-big {
+      font-size: 42px;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 24px;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 48px 0 24px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+    .footer h4 { color: white; font-size: 16px; margin-bottom: 16px; }
+    .footer p { line-height: 1.6; font-size: 14px; }
+    .footer ul { list-style: none; }
+    .footer li { margin-bottom: 8px; }
+    .footer a { color: #94a3b8; text-decoration: none; font-size: 14px; }
+    .footer a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      padding-top: 24px;
+      text-align: center;
+      font-size: 13px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero .container { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 32px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-image { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="topbar">
+      <div class="container">
+        <span>📍 Serving Hermosa Beach & South Bay since day one</span>
+        <a href="tel:+18668185182">📞 (866) 818-5182 — Available Now</a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="container">
+        <div class="logo">Hermosa Beach<br><span>Plumbing, Heating & A.C.</span></div>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:+18668185182" class="cta-phone">📞 Call Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="rating-badge">
+          <span class="stars">★★★★★</span>
+          <span>4.7 Stars · 18 Google Reviews</span>
+        </div>
+        <h1>Your Trusted <span>Hermosa Beach</span> Plumber</h1>
+        <p>Same-day service. Fair, upfront pricing. Plumbing, heating, and A/C — done right the first time. Serving Hermosa Beach, Manhattan Beach, and the South Bay.</p>
+        <div class="hero-buttons">
+          <a href="tel:+18668185182" class="btn-primary">📞 Call (866) 818-5182</a>
+          <a href="#services" class="btn-secondary">Our Services →</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div style="font-size: 80px; margin-bottom: 16px;">🔧</div>
+        <div style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Need a plumber today?</div>
+        <div style="opacity: 0.8;">We're available now.</div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">4.7</div>
+            <div class="stat-label">★ Google Rating</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">18</div>
+            <div class="stat-label">5-Star Reviews</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Available</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Professional plumbing, heating, and AC for your home</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚿</div>
+          <h3>Plumbing Repair</h3>
+          <p>Leaky faucets, clogged drains, pipe repairs, and sewer line service. Fast diagnosis, lasting fixes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔥</div>
+          <h3>Water Heater Service</h3>
+          <p>Installation, repair, and replacement. Tank and tankless water heaters. Same-day service available.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">❄️</div>
+          <h3>Heating & A/C</h3>
+          <p>Furnace repair, AC installation, and HVAC maintenance. Stay comfortable year-round.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚨</div>
+          <h3>Emergency Service</h3>
+          <p>Burst pipe at 2am? We're here. Emergency plumbing service when you need it most.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Remodeling</h3>
+          <p>Kitchen and bathroom plumbing for your remodel. New fixtures, rerouting, and custom installations.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Inspections</h3>
+          <p>Home buying? Get a professional plumbing inspection. We'll tell you exactly what you're looking at.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <h2 class="section-title">Why Hermosa Beach Trusts Us</h2>
+      <p class="section-subtitle">We're your neighbors — and we treat your home like ours</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Same-Day Service</h3>
+          <p>Call in the morning, we're there by afternoon. No waiting around for days.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Upfront Pricing</h3>
+          <p>You know the cost before we start. No surprises on the bill — ever.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h3>4.7★ Rated</h3>
+          <p>18 five-star reviews on Google. Our customers love us — and we work hard to keep it that way.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <h3>Local & Licensed</h3>
+          <p>Based right here in Hermosa Beach. Licensed, insured, and part of the community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2 class="section-title">What Your Neighbors Say</h2>
+      <p class="section-subtitle">Real reviews from real Hermosa Beach customers</p>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"This was the best service contractor we have ever hired to work in our home."</p>
+          <div class="review-author">— Verified Customer</div>
+          <div class="review-source">via Google Reviews</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Leo helped me repair a water leak on a cold water supply line today. He was so friendly and resolved our issue the same day. Very reasonable with cost."</p>
+          <div class="review-author">— S. Bzglo</div>
+          <div class="review-source">via Google Reviews</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Had a water heater leak today — both plumber John and Leo came out. They were fantastic. All work was completed to perfection. Cost was upfront and very fair."</p>
+          <div class="review-author">— Aida S.</div>
+          <div class="review-source">via Google Reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <h2>Ready to Fix That Problem?</h2>
+      <p>No job too big or too small. Call us now for fast, fair service.</p>
+      <a href="tel:+18668185182" class="cta-phone-big">(866) 818-5182</a>
+      <a href="tel:+18668185182" class="btn-primary" style="font-size: 20px; padding: 20px 40px;">📞 Call Now — Free Estimate</a>
+      <p style="margin-top: 24px; opacity: 0.7; font-size: 14px;">📍 620 Cypress Ave, Hermosa Beach, CA 90254</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Hermosa Beach Plumbing, Heating & A.C.</h4>
+          <p>Your trusted local plumber serving Hermosa Beach, Manhattan Beach, Redondo Beach, and the South Bay. Licensed, insured, and committed to quality work at fair prices.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Plumbing Repair</a></li>
+            <li><a href="#services">Water Heater Service</a></li>
+            <li><a href="#services">Heating & A/C</a></li>
+            <li><a href="#services">Emergency Service</a></li>
+            <li><a href="#services">Remodeling</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+18668185182">📞 (866) 818-5182</a></li>
+            <li>📍 620 Cypress Ave</li>
+            <li>Hermosa Beach, CA 90254</li>
+            <li>🕐 Open Daily</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Hermosa Beach Plumbing, Heating & A.C. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
